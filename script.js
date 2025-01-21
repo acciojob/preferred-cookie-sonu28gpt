@@ -27,12 +27,15 @@ document.addEventListener('DOMContentLoaded',()=>{
 	let fcv=getCookie('fontcolor')
 	if(fsv){
 		fs.value=fsv;
+		document.body.style.fontSize=`${fsv}px`;
 	}
 	if(fcv){
+		document.body.style.color=fcv;
 		fc.value=fcv;
 	}
+	
 })
-
+ 
 let submit=document.querySelector('input[type=submit]');
 submit.addEventListener('click',(e)=>{
 	e.preventDefault();
